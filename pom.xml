@@ -11,6 +11,7 @@
     <modules>
         <module>ProyectoPro3Modelo</module>
         <module>ProyectoPro3DBManager</module>
+        <module>ProyectoPro3Persistencia</module>
     </modules>
 
     <properties>
