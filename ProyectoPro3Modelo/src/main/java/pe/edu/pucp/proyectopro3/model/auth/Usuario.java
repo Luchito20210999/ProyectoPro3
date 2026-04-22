@@ -23,6 +23,10 @@ public class Usuario {
         this.contrasena = contrasena;
     }
 
+    public Usuario() {
+
+    }
+
     // --- //
     public int getIDUsuario() {
         return IDUsuario;
