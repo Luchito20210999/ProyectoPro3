@@ -23,6 +23,10 @@ public class Reclamo {
         this.reserva = reserva;
     }
 
+    public Reclamo() {
+
+    }
+
     // --- //
     public int getIDReclamo() {
         return IDReclamo;

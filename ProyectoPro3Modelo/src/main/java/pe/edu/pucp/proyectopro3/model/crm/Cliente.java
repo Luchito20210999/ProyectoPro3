@@ -3,6 +3,7 @@ package pe.edu.pucp.proyectopro3.model.crm;
 import java.util.Date;
 
 public class Cliente {
+    private int IDCliente;
     private String nombres;
     private String apellidos;
     private TipoDocumento tipoDocumento;
@@ -11,9 +12,10 @@ public class Cliente {
     private String correo;
     private Date fechaRegistro;
     private Date fechaNacimiento;
-    private int numeroContacto;
+    private String numeroContacto;
 
-    public Cliente(String nombres, String apellidos, TipoDocumento tipoDocumento, int numeroDocumento, String nacionalidad, String correo, Date fechaRegistro, Date fechaNacimiento, int numeroContacto) {
+    public Cliente(int IDCliente,String nombres, String apellidos, TipoDocumento tipoDocumento, int numeroDocumento, String nacionalidad, String correo, Date fechaRegistro, Date fechaNacimiento, String numeroContacto) {
+        this.IDCliente = IDCliente;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.tipoDocumento = tipoDocumento;
@@ -25,6 +27,17 @@ public class Cliente {
         this.numeroContacto = numeroContacto;
     }
 
+    public Cliente() {
+
+    }
+    // --- //
+    public int getIDCliente() {
+        return IDCliente;
+    }
+
+    public void setIDCliente(int IDCliente) {
+        this.IDCliente = IDCliente;
+    }
     // --- //
     public String getNombres() {
         return nombres;
@@ -98,11 +111,11 @@ public class Cliente {
     }
 
     // --- //
-    public int getNumeroContacto() {
+    public String getNumeroContacto() {
         return numeroContacto;
     }
 
-    public void setNumeroContacto(int numeroContacto) {
+    public void setNumeroContacto(String numeroContacto) {
         this.numeroContacto = numeroContacto;
     }
 }
