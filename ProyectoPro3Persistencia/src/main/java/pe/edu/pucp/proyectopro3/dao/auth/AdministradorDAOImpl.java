@@ -1,6 +1,5 @@
 package pe.edu.pucp.proyectopro3.dao.auth;
 
-import pe.edu.pucp.proyectopro3.dao.PersonaBaseDAO;
 import pe.edu.pucp.proyectopro3.model.auth.Administrador;
 import pe.edu.pucp.proyectopro3.model.auth.Analista;
 

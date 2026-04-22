@@ -13,6 +13,10 @@ public class Administrador extends Usuario implements UsuariosGestionable, Consu
         super(IDUsuario, nombres, apellidos, tipoDocumento, numeroDocumento, numeroContacto, correo, contrasena);
     }
 
+    public Administrador() {
+
+    }
+
     //UsuariosGestionable
     @Override
     public void crearUsuario(Usuario u) {
