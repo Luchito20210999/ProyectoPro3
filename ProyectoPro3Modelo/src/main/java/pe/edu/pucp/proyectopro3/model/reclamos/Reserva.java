@@ -16,8 +16,9 @@ public class Reserva {
     private Cliente cliente;
     private ArrayList<DetalleReserva> detalles;
     private double montoImpuestos;
+    private int IDCliente;
 
-    public Reserva(int IDReserva, Date fechaRegistro, EstadoReserva estadoReserva, int cantidadBoletos, double montoTotal, Date fechaUltimaModificacion, String canalVenta, Cliente cliente, ArrayList<DetalleReserva> detalles,double montoImpuestos) {
+    public Reserva(int IDReserva, Date fechaRegistro, EstadoReserva estadoReserva, int cantidadBoletos, double montoTotal, Date fechaUltimaModificacion, String canalVenta, Cliente cliente, ArrayList<DetalleReserva> detalles,double montoImpuestos,int IDCliente) {
         this.IDReserva = IDReserva;
         this.fechaRegistro = fechaRegistro;
         this.estadoReserva = estadoReserva;
@@ -28,7 +29,13 @@ public class Reserva {
         this.cliente = cliente;
         this.detalles = new ArrayList<>();
         this.montoImpuestos = montoImpuestos;
+        this.IDCliente = IDCliente;
     }
+
+    public Reserva() {
+
+    }
+
     // --- //
     public int getIDReserva() {
         return IDReserva;
@@ -98,4 +105,13 @@ public class Reserva {
     public void setMontoImpuestos(double montoImpuestos){
         this.montoImpuestos = montoImpuestos;
     }
+    // --- //
+    public int getIDCliente(){
+        return IDCliente;
+    }
+    public void setIDCliente(int IDCliente){
+        this.IDCliente = IDCliente;
+    }
+
+
 }

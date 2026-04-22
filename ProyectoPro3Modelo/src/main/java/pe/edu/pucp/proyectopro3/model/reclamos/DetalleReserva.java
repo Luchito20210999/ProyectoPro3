@@ -5,12 +5,18 @@ public class DetalleReserva {
     private int cantidad;
     private double subtotal;
     private Servicio servicio;
+    private Reserva reserva;
 
-    public DetalleReserva(int IDDetalle, int cantidad, double subtotal, Servicio servicio) {
+    public DetalleReserva(int IDDetalle, int cantidad, double subtotal, Servicio servicio,Reserva reserva) {
         this.IDDetalle = IDDetalle;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
         this.servicio = servicio;
+        this.reserva = reserva;
+    }
+
+    public DetalleReserva() {
+
     }
 
     public int getIDDetalle() {
@@ -40,4 +46,7 @@ public class DetalleReserva {
     public void setServicio(Servicio servicio) {
         this.servicio = servicio;
     }
+    // --- //
+    public Reserva getReserva() { return reserva; }
+    public void setReserva(Reserva reserva) { this.reserva = reserva; }
 }

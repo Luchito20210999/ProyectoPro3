@@ -23,6 +23,10 @@ public class Servicio {
         this.ciudadDestino = ciudadDestino;
     }
 
+    public Servicio() {
+
+    }
+
     public int getIDServicio() {
         return IDServicio;
     }
