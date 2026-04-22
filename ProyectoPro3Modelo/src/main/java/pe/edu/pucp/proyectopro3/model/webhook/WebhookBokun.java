@@ -3,16 +3,29 @@ package pe.edu.pucp.proyectopro3.model.webhook;
 import java.util.ArrayList;
 
 public class WebhookBokun {
+    private int IDBokun;
     private String secretKey;
     private String accessKey;
     private ArrayList<WebhookLog> webLogs;
 
-    public WebhookBokun(String secretKey, String accessKey, ArrayList<WebhookLog> webLogs) {
+    public WebhookBokun(int IDBokun,String secretKey, String accessKey, ArrayList<WebhookLog> webLogs) {
+        this.IDBokun = IDBokun;
         this.secretKey = secretKey;
         this.accessKey = accessKey;
         this.webLogs = new ArrayList<>();
     }
 
+    public WebhookBokun() {
+
+    }
+
+    public int getIDBokun(){
+        return IDBokun;
+    }
+    public void setIDBokun(int IDBokun){
+        this.IDBokun = IDBokun;
+    }
+    // --- //
     public String getSecretKey() {
         return secretKey;
     }
