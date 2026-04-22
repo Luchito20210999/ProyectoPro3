@@ -10,6 +10,10 @@ public class Operador extends Usuario implements ReservasGestionable, Atendible 
         super(IDUsuario, nombres, apellidos, tipoDocumento, numeroDocumento, numeroContacto, correo, contrasena);
     }
 
+    public Operador() {
+
+    }
+
     //ReservasGestionable
     @Override
     public void modificarReserva(int idReserva) {

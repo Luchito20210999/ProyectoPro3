@@ -12,6 +12,10 @@ public class Analista extends Usuario implements Consultable {
         super(IDUsuario, nombres, apellidos, tipoDocumento, numeroDocumento,numeroContacto, correo, contrasena);
     }
 
+    public Analista() {
+
+    }
+
     //Consultable
     @Override
     public Reporte generarReporte(Date fechaInicio, Date fechaFin) {
