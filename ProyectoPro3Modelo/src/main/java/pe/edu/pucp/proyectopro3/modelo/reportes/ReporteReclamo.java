@@ -14,6 +14,10 @@ public class ReporteReclamo extends Reporte{
     private int totalNoProcede;
     private int totalPendientes;
 
+    public ReporteReclamo() {
+
+    }
+
     public List<Reclamo> getDetalleReclamos() {
         return detalleReclamos;
     }

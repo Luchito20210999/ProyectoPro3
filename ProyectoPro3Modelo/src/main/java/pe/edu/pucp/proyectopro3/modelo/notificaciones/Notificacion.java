@@ -21,6 +21,10 @@ public class Notificacion {
         this.tipEvento = tipEvento;
     }
 
+    public Notificacion() {
+
+    }
+
     public int getIdNotificacion() {
         return idNotificacion;
     }

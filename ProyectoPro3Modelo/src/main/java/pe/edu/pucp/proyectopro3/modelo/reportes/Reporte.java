@@ -2,7 +2,7 @@ package pe.edu.pucp.proyectopro3.modelo.reportes;
 
 import java.util.Date;
 
-public class Reporte {
+public abstract class Reporte {
     private int idReporte;
     private Date fechaGeneracion;
     private Date fechaInicioFiltro;
@@ -13,6 +13,10 @@ public class Reporte {
         this.fechaGeneracion = fechaGeneracion;
         this.fechaInicioFiltro = fechaInicioFiltro;
         this.fechaFinFiltro = fechaFinFiltro;
+    }
+
+    public Reporte() {
+
     }
 
     public int getIdReporte() {

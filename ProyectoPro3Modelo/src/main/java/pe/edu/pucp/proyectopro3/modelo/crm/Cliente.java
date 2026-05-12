@@ -7,14 +7,14 @@ public class Cliente {
     private String nombres;
     private String apellidos;
     private TipoDocumento tipoDocumento;
-    private int numeroDocumento;
+    private String numeroDocumento;
     private String nacionalidad;
     private String correo;
-    private Date fechaRegsitro;
+    private Date fechaRegistro;
     private String numeroContacto;
     private Date fechaNacimiento;
 
-    public Cliente(int idCliente, String nombres, String apellidos, TipoDocumento tipoDocumento, int numeroDocumento, String nacionalidad, String correo, Date fechaRegsitro, String numeroContacto, Date fechaNacimiento) {
+    public Cliente(int idCliente, String nombres, String apellidos, TipoDocumento tipoDocumento, String numeroDocumento, String nacionalidad, String correo, Date fechaRegistro, String numeroContacto, Date fechaNacimiento) {
         this.idCliente = idCliente;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -22,9 +22,13 @@ public class Cliente {
         this.numeroDocumento = numeroDocumento;
         this.nacionalidad = nacionalidad;
         this.correo = correo;
-        this.fechaRegsitro = fechaRegsitro;
+        this.fechaRegistro = fechaRegistro;
         this.numeroContacto = numeroContacto;
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Cliente() {
+
     }
 
     public int getIdCliente() {
@@ -59,11 +63,11 @@ public class Cliente {
         this.tipoDocumento = tipoDocumento;
     }
 
-    public int getNumeroDocumento() {
+    public String getNumeroDocumento() {
         return numeroDocumento;
     }
 
-    public void setNumeroDocumento(int numeroDocumento) {
+    public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
 
@@ -83,12 +87,12 @@ public class Cliente {
         this.correo = correo;
     }
 
-    public Date getFechaRegsitro() {
-        return fechaRegsitro;
+    public Date getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setFechaRegsitro(Date fechaRegsitro) {
-        this.fechaRegsitro = fechaRegsitro;
+    public void setFechaRegistro(Date fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
 
     public String getNumeroContacto() {

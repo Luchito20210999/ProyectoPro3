@@ -25,6 +25,10 @@ public class Reserva {
         this.idCliente = idCliente;
     }
 
+    public Reserva() {
+
+    }
+
     public int getIdReserva() {
         return idReserva;
     }

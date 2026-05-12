@@ -20,6 +20,10 @@ public class LogAuditoria {
         this.origenAccion = origenAccion;
     }
 
+    public LogAuditoria() {
+
+    }
+
     public int getIdLogAuditoria() {
         return idLogAuditoria;
     }

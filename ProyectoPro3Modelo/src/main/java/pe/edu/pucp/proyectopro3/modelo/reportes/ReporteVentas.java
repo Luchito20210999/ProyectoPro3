@@ -17,6 +17,10 @@ public class ReporteVentas extends Reporte {
         this.montoTotalGenerado = montoTotalGenerado;
     }
 
+    public ReporteVentas() {
+        super();
+    }
+
     public List<Reserva> getDetalleVentas() {
         return detalleVentas;
     }

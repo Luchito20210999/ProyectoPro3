@@ -6,17 +6,21 @@ public class Reclamo {
     private int idReclamo;
     private Date fechaReclamo;
     private String descripcion;
-    private EstadoReclamo estadpReclamo;
+    private EstadoReclamo estadoReclamo;
     private String motivoResolucion;
     private Date fechaResolucion;
 
-    public Reclamo(int idReclamo, Date fechaReclamo, String descripcion, EstadoReclamo estadpReclamo, String motivoResolucion, Date fechaResolucion) {
+    public Reclamo(int idReclamo, Date fechaReclamo, String descripcion, EstadoReclamo estadoReclamo, String motivoResolucion, Date fechaResolucion) {
         this.idReclamo = idReclamo;
         this.fechaReclamo = fechaReclamo;
         this.descripcion = descripcion;
-        this.estadpReclamo = estadpReclamo;
+        this.estadoReclamo = estadoReclamo;
         this.motivoResolucion = motivoResolucion;
         this.fechaResolucion = fechaResolucion;
+    }
+
+    public Reclamo() {
+
     }
 
     public int getIdReclamo() {
@@ -43,12 +47,12 @@ public class Reclamo {
         this.descripcion = descripcion;
     }
 
-    public EstadoReclamo getEstadpReclamo() {
-        return estadpReclamo;
+    public EstadoReclamo getEstadoReclamo() {
+        return estadoReclamo;
     }
 
-    public void setEstadpReclamo(EstadoReclamo estadpReclamo) {
-        this.estadpReclamo = estadpReclamo;
+    public void setEstadoReclamo(EstadoReclamo estadoReclamo) {
+        this.estadoReclamo = estadoReclamo;
     }
 
     public String getMotivoResolucion() {
