@@ -10,7 +10,7 @@ public class ReclamoDAOImpl extends DefaultBaseDAO<Reclamo> implements ReclamoDA
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Reclamo modelo) throws SQLException {
         // Usamos el procedimiento sp_InsertReclamo definido en tu SQL [cite: 1]
-        String sql = "{call sp_InsertReclamo(?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertReclamo(?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setDate(1, new java.sql.Date(modelo.getFechaReclamo().getTime()));
@@ -18,7 +18,7 @@ public class ReclamoDAOImpl extends DefaultBaseDAO<Reclamo> implements ReclamoDA
         cmd.setString(3, modelo.getEstadoReclamo().name());
         cmd.setString(4, modelo.getMotivoResolucion());
         cmd.setDate(5, new java.sql.Date(modelo.getFechaResolucion().getTime()));
-
+        cmd.setInt(6,modelo.getIdReserva());
 
         return cmd;
     }
@@ -71,6 +71,7 @@ public class ReclamoDAOImpl extends DefaultBaseDAO<Reclamo> implements ReclamoDA
         reclamo.setEstadoReclamo(EstadoReclamo.valueOf(rs.getString("estadoReclamo")));
         reclamo.setMotivoResolucion(rs.getString("motivoResolucion"));
         reclamo.setFechaResolucion(rs.getDate("fechaResolucion"));
+        reclamo.setIdReserva(rs.getInt("idReserva"));
         return reclamo;
     }
 }

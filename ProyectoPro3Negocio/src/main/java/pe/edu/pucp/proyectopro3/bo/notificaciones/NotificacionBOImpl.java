@@ -53,9 +53,6 @@ public class NotificacionBOImpl extends BaseBO implements NotificacionBO {
         }
     }
 
-    /**
-     * Validación ajustada al UML: Solo requiere Usuario
-     */
     private void validarNotificacion(Notificacion modelo) {
         Objects.requireNonNull(modelo, "El objeto Notificación no puede ser nulo");
 
@@ -65,7 +62,6 @@ public class NotificacionBOImpl extends BaseBO implements NotificacionBO {
             throw new IllegalArgumentException("La fecha de envío es obligatoria");
         }
 
-        // Ajuste según tu UML: La notificación se dirige a un Usuario (personal de SACR)
         if (modelo.getIdUsuario() <= 0) {
             throw new IllegalArgumentException("La notificación debe estar asociada a un Usuario válido.");
         }

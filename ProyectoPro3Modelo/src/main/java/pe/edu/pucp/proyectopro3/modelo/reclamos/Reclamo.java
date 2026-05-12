@@ -9,14 +9,16 @@ public class Reclamo {
     private EstadoReclamo estadoReclamo;
     private String motivoResolucion;
     private Date fechaResolucion;
+    private int idReserva;
 
-    public Reclamo(int idReclamo, Date fechaReclamo, String descripcion, EstadoReclamo estadoReclamo, String motivoResolucion, Date fechaResolucion) {
+    public Reclamo(int idReclamo, Date fechaReclamo, String descripcion, EstadoReclamo estadoReclamo, String motivoResolucion, Date fechaResolucion, int idReserva) {
         this.idReclamo = idReclamo;
         this.fechaReclamo = fechaReclamo;
         this.descripcion = descripcion;
         this.estadoReclamo = estadoReclamo;
         this.motivoResolucion = motivoResolucion;
         this.fechaResolucion = fechaResolucion;
+        this.idReserva = idReserva;
     }
 
     public Reclamo() {
@@ -69,5 +71,13 @@ public class Reclamo {
 
     public void setFechaResolucion(Date fechaResolucion) {
         this.fechaResolucion = fechaResolucion;
+    }
+
+    public int getIdReserva() {
+        return idReserva;
+    }
+
+    public void setIdReserva(int idReserva) {
+        this.idReserva = idReserva;
     }
 }

@@ -1,6 +1,7 @@
 package pe.edu.pucp.proyectopro3.modelo.reservas;
 
 import java.util.Date;
+import java.util.List;
 
 public class Reserva {
     private int idReserva;
@@ -12,8 +13,9 @@ public class Reserva {
     private String canalVenta;
     private double montoImpuestos;
     private int idCliente;
+    private List<DetalleReserva> detalles;
 
-    public Reserva(int idReserva, Date fechaRegistro, EstadoReserva estadoReserva, int cantidadBoletos, double montoTotal, Date fechaUltimaModificacion, String canalVenta, double montoImpuestos, int idCliente) {
+    public Reserva(int idReserva, Date fechaRegistro, EstadoReserva estadoReserva, int cantidadBoletos, double montoTotal, Date fechaUltimaModificacion, String canalVenta, double montoImpuestos, int idCliente, List<DetalleReserva> detalles) {
         this.idReserva = idReserva;
         this.fechaRegistro = fechaRegistro;
         this.estadoReserva = estadoReserva;
@@ -23,6 +25,7 @@ public class Reserva {
         this.canalVenta = canalVenta;
         this.montoImpuestos = montoImpuestos;
         this.idCliente = idCliente;
+        this.detalles = detalles;
     }
 
     public Reserva() {
@@ -99,5 +102,13 @@ public class Reserva {
 
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public List<DetalleReserva> getDetalles() {
+        return detalles;
+    }
+
+    public void setDetalles(List<DetalleReserva> detalles) {
+        this.detalles = detalles;
     }
 }
